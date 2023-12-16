@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <div>
+        <div id="piano-white">
+            <div class="white-key A zero"><div class="shadow"></div><span></span></div>
+            <div class="white-key B zero"><div class="shadow"></div><span></span></div>
+            <div class="white-key C one"><div class="shadow"></div><span>S</span></div>
+            <div class="white-key D one"><div class="shadow"></div><span>D</span></div>
+            <div class="white-key E one"><div class="shadow"></div><span>F</span></div>
+            <div class="white-key F one"><div class="shadow"></div><span>G</span></div>
+            <div class="white-key G one"><div class="shadow"></div><span>H</span></div>
+            <div class="white-key A one"><div class="shadow"></div><span>J</span></div>
+            <div class="white-key B one"><div class="shadow"></div><span>Q</span></div>
+            <div class="white-key C two"><div class="shadow"></div><span>W</span></div>
+            <div class="white-key D two"><div class="shadow"></div><span>E</span></div>
+            <div class="white-key E two"><div class="shadow"></div><span>R</span></div>
+            <div class="white-key F two"><div class="shadow"></div><span>T</span></div>
+            <div class="white-key G two"><div class="shadow"></div><span>r</span></div>
+            <div class="white-key A two"><div class="shadow"></div><span>t</span></div>
+            <div class="white-key B two"><div class="shadow"></div><span>y</span></div>
+            <div class="white-key C three"><div class="shadow"></div><span>q</span></div>
+            <div class="white-key D three"><div class="shadow"></div><span>a</span></div>
+            <div class="white-key E three"><div class="shadow"></div><span>w</span></div>
+            <div class="white-key F three"><div class="shadow"></div><span>s</span></div>
+            <div class="white-key G three"><div class="shadow"></div><span>e</span></div>
+            <div class="white-key A three"><div class="shadow"></div><span>d</span></div>
+            <div class="white-key B three"><div class="shadow"></div><span>f</span></div>
+            <div class="white-key C four"><div class="shadow"></div><span>g</span></div>
+            <div class="white-key D four"><div class="shadow"></div><span>h</span></div>
+            <div class="white-key E four"><div class="shadow"></div><span>j</span></div>
+            <div class="white-key F four"><div class="shadow"></div><span>k</span></div>
+            <div class="white-key G four"><div class="shadow"></div><span>l</span></div>
+            <div class="white-key A four"><div class="shadow"></div><span>p</span></div>
+            <div class="white-key B four"><div class="shadow"></div><span>;</span></div>
+            <div class="white-key C five"><div class="shadow"></div><span>[</span></div>
+            <div class="white-key D five"><div class="shadow"></div><span>:</span></div>
+            <div class="white-key E five"><div class="shadow"></div><span>]</span></div>
+            <div class="white-key F five"><div class="shadow"></div><span>u</span></div>
+            <div class="white-key G five"><div class="shadow"></div><span>i</span></div>
+            <div class="white-key A five"><div class="shadow"></div><span>o</span></div>
+            <div class="white-key B five"><div class="shadow"></div><span>Y</span></div>
+            <div class="white-key C six"><div class="shadow"></div><span>U</span></div>
+            <div class="white-key D six"><div class="shadow"></div><span>I</span></div>
+            <div class="white-key E six"><div class="shadow"></div><span>O</span></div>
+            <div class="white-key F six"><div class="shadow"></div><span>P</span></div>
+            <div class="white-key G six"><div class="shadow"></div><span>K</span></div>
+            <div class="white-key A six"><div class="shadow"></div><span>L</span></div>
+            <div class="white-key B six"><div class="shadow"></div><span>z</span></div>
+            <div class="white-key C seven"><div class="shadow"></div><span>x</span></div>
+            <div class="white-key D seven"><div class="shadow"></div><span>Z</span></div>
+            <div class="white-key E seven"><div class="shadow"></div><span>X</span></div>
+            <div class="white-key F seven"><div class="shadow"></div><span>C</span></div>
+            <div class="white-key G seven"><div class="shadow"></div><span>V</span></div>
+            <div class="white-key A seven"><div class="shadow"></div><span>B</span></div>
+            <div class="white-key B seven"><div class="shadow"></div><span>N</span></div>
+            <div class="white-key C eight"><div class="shadow"></div><span></span></div>           
+        </div>
+        <div id="piano-black">
+            <div class="octave">
+                <div class="black-key Asharp zero">
+                    <span></span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="octave">
+                <div class="black-key Csharp one">
+                    <span></span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp one">
+                    <span>c</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp one">
+                    <span>v</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp one">
+                    <span>b</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp one">
+                    <span>n</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp two">
+                    <span>m</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp two">
+                    <span>!</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp two">
+                    <span>@</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp two">
+                    <span>#</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp two">
+                    <span>$</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp three">
+                    <span>%</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp three">
+                    <span>1</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp three">
+                    <span>2</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp three">
+                    <span>3</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp three">
+                    <span>4</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp four">
+                    <span>5</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp four">
+                    <span>6</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp four">
+                    <span>7</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp four">
+                    <span>8</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp four">
+                    <span>9</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp five">
+                    <span>0</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp five">
+                    <span>A</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp five">
+                    <span>&</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp five">
+                    <span>*</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp five">
+                    <span>-</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp six">
+                    <span>=</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp six">
+                    <span>+</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp six">
+                    <span>/</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp six">
+                    <span>,</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp six">
+                    <span>.</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="octave">
+                <div class="black-key Csharp seven">
+                    <span>?</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Dsharp seven">
+                    <span>M</span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+    
+                <div class="black-key Fsharp seven">
+                    <span></span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Gsharp seven">
+                    <span></span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+                <div class="black-key Asharp seven">
+                    <span></span>
+                    <div class="trapezoid">
+                        <span class="triangle"></span>
+                        <span class="rectangle"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
